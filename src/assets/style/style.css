@@ -1,0 +1,108 @@
+@font-face {
+  font-family: montserrat_bold;
+  src: url("./../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: montserrat_medium;
+  src: url("./../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: bungee;
+  src: url("./../fonts/Bungee/Bungee-Regular.ttf");
+}
+
+@font-face {
+  font-family: road_rage;
+  src: url("./../fonts/Road_Rage/RoadRage-Regular.ttf");
+}
+
+body {
+  background-color: #595856;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  float: left; /*pour IE*/
+}
+ul li a {
+  display: block;
+  float: left;
+  min-width: 200px;
+  line-height: 50px; /*hauteur de l'image de fond*/
+  background: black;
+  color: #dcdcdc;
+  font-family: montserrat_bold;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+ul li a:hover {
+  background: rgb(46, 46, 46);
+  color: white;
+}
+
+h1 {
+  font-family: road_rage;
+  font-size: 5em;
+  color: #c9c7c1;
+  /* margin-top: -0.6em; */
+  /*   margin-bottom: -0.6em;
+ */
+  /* line-height: 0.5em; */
+}
+
+/* .titre_elem {
+  display: block;
+  float: left;
+} */
+
+.logo {
+  width: 110px;
+  height: auto;
+  display: block;
+  float: left;
+  /*   margin-top: -3em;
+ */
+}
+
+table tr td {
+  border: solid 2px whitesmoke;
+  color: aliceblue;
+}
+table tr th {
+  border: solid 2px whitesmoke;
+  color: aliceblue;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+header {
+  display:list-item
+}
+
+h2 {
+  margin-top: 120px;
+}
+
+label {
+  color: aliceblue;
+}
+.global .gauche {
+  float:left;
+  width:20%;
+}
+.global .droite {
+  margin-left:20%   
+}
+
+.propos {
+  width: 60%;
+}
