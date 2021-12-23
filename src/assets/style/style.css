@@ -18,34 +18,44 @@
 }
 
 body {
-  background-color: #595856;
+/*   background-color: #595856;
+ */
+    background-image: url("./../images/pattern.png");
 }
 
 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  
 }
 li {
   float: left; /*pour IE*/
 }
-ul li a {
-  display: block;
-  float: left;
-  min-width: 200px;
+div ul li a {
+/*   display: block;
+  float: left; */
+  min-width: 240px;
   line-height: 50px; /*hauteur de l'image de fond*/
-  background: black;
+  background: rgb(46, 46, 46);
   color: #dcdcdc;
   font-family: montserrat_bold;
   text-decoration: none;
   text-align: center;
   transition: 0.3s;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 20px;
+
 }
 ul li a:hover {
-  background: rgb(46, 46, 46);
+  background: rgb(82, 63, 63);
   color: white;
 }
+
 
 h1 {
   font-family: road_rage;
@@ -89,20 +99,119 @@ header {
 }
 
 h2 {
-  margin-top: 120px;
+  color: aliceblue;
 }
 
 label {
   color: aliceblue;
 }
-.global .gauche {
+/* .global .gauche {
   float:left;
   width:20%;
 }
 .global .droite {
   margin-left:20%   
-}
+} */
 
 .propos {
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+  width: 1200px;
+  border: solid 2px lightcyan;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+
+}
+
+h3 {
+  color: aliceblue;
+}
+
+.global {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(84, 97, 109);
+  border-radius: 20px;
+  width: 50%;
+  padding: 40px;
+  margin: auto;
+}
+
+.cont-formulaire {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  align-items: center;
+  padding: 40px;
+  width: 50%;
+  background-color: rgb(84, 97, 109);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+/*   border: solid 1px black;
+ */  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+form div input, form div select {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.valid {
+  background-color: chartreuse;
+  border-radius: 10px;
+}
+
+.valid:hover{
+  cursor: pointer;
+}
+
+.propos-nom {
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 180px;
+}
+
+.gauche, .droite {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cont-formulaire-index {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  align-items: center;
+  padding: 40px;
   width: 60%;
+  background-color: rgb(84, 97, 109);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-contact {
+  border-radius: 20px;
+  width: 100%;
+}
+
+input {
+  border-radius: 10px;
 }
