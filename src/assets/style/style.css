@@ -53,7 +53,7 @@ div ul li a {
 }
 ul li a:hover {
   background: rgb(82, 63, 63);
-  color: white;
+  font-size: 12px;  
 }
 
 
@@ -165,9 +165,14 @@ form div {
   padding-right: 80px;
 }
 
-form div input, form div select {
+form div label {
+  flex: 30%;
+}
+
+form div input, form div select, form div textarea {
   width: 200px;
   margin-left: 20px;
+  flex: 70%;
 }
 
 .valid {
@@ -214,4 +219,21 @@ form div input, form div select {
 
 input {
   border-radius: 10px;
+}
+
+select {
+  border-radius: 10px;
+}
+
+textarea {
+  border-radius: 10px;
+}
+
+#tableau {
+  width: 500px;
+}
+
+.trash {
+  height: 20px;
+  width: auto;
 }

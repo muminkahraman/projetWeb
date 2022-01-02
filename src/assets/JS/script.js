@@ -1,7 +1,22 @@
 var ajout = () => {
-    recup();
-    /*     affich(); */
-    addRow();
+    let newLine = recup();
+    if (localStorage.getItem('indexEnCours') == null) {
+        localStorage.setItem('indexEnCours', '0');
+        var index = 0;
+    } else {
+        localStorage.setItem('indexEnCours', JSON.stringify(JSON.parse(localStorage.getItem('indexEnCours')) + 1))
+        var index = JSON.parse(localStorage.getItem('indexEnCours'));
+    }
+
+    newLine['index'] = index;
+    if (localStorage.getItem('tableau') == null) {
+        localStorage.setItem('tableau', JSON.stringify([newLine]));
+    } else {
+        let actuel = JSON.parse(localStorage.getItem('tableau'));
+        actuel.push(newLine);
+        localStorage.setItem('tableau', JSON.stringify(actuel));
+    }
+    addRow(newLine, index);
 }
 
 /* var jsonTab = [];
@@ -18,7 +33,14 @@ var recup = () => {
     var critique = document.forms.nouvavis.critique.value;
     document.forms.nouvavis.reset()
 
-    jsonTab = [...jsonTab, { nom: nom, email: email, nomfilm: nomfilm, titre: titre, note: note, critique: critique }]
+    return ({
+        nom: nom,
+        email: email,
+        nomfilm: nomfilm,
+        titre: titre,
+        note: note,
+        critique: critique
+    })
     console.log(jsonTab);
 
 }
@@ -27,7 +49,15 @@ var tesst = () => {
     console.log(jsonTab);
 }
 
-function addRow() {
+const remplirTableau = () => {
+    let tableau = JSON.parse(localStorage.getItem('tableau'));
+    tableau.map((row) => {
+        addRow(row, row.index);
+    }
+    )
+}
+
+function addRow(newLine, index) {
     // Get a reference to the table
     let tableRef = document.getElementById('tableau');
 
@@ -35,25 +65,37 @@ function addRow() {
     let newRow = tableRef.insertRow(-1);
 
     // Insert a cell in the row at index 0
-    let newpseudoc = newRow.insertCell(0);
-    let newfilmc = newRow.insertCell(1);
-    let newtitrec = newRow.insertCell(2);
-    let newnotec = newRow.insertCell(3);
-    let newcritiquec = newRow.insertCell(4);
+    let newidc = newRow.insertCell(0);
+    let newpseudoc = newRow.insertCell(1);
+    let newfilmc = newRow.insertCell(2);
+    let newtitrec = newRow.insertCell(3);
+    let newnotec = newRow.insertCell(4);
+    let newcritiquec = newRow.insertCell(5);
+    let newdelc = newRow.insertCell(6);
 
 
-    let newpseudojson = jsonTab[jsonTab.length -1].nom;
-    let newfilmjson = jsonTab[jsonTab.length -1].nomfilm;
-    let newtitrejson = jsonTab[jsonTab.length -1].titre;
-    let newnotejson = jsonTab[jsonTab.length -1].note;
-    let newcritiquejson = jsonTab[jsonTab.length -1].critique;
+    let newidjson = JSON.stringify(index);
+    let newpseudojson = newLine.nom;
+    let newfilmjson = newLine.nomfilm;
+    let newtitrejson = newLine.titre;
+    let newnotejson = newLine.note;
+    let newcritiquejson = newLine.critique;
     // Append a text node to the cell
+    let newid = document.createTextNode(newidjson);
     let newpseudo = document.createTextNode(newpseudojson);
     let newfilm = document.createTextNode(newfilmjson);
     let newtitre = document.createTextNode(newtitrejson);
     let newnote = document.createTextNode(newnotejson + '/5');
     let newcritique = document.createTextNode(newcritiquejson);
 
+    let img = document.createElement('img');
+    img.src = './../../assets/images/trash.png';
+    img.classList.add('trash');
+    img.setAttribute('onclick','console.log(parentNode.parentNode.rowIndex)');
+
+    newdelc.appendChild(img);
+
+    newidc.appendChild(newid);
     newpseudoc.appendChild(newpseudo);
     newfilmc.appendChild(newfilm);
     newtitrec.appendChild(newtitre);
@@ -63,3 +105,5 @@ function addRow() {
 /* var affich = () => {
     jsonTab.map
 } */
+
+remplirTableau();
