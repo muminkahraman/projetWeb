@@ -1,70 +1,74 @@
 @font-face {
-  font-family: montserrat_bold;
-  src: url("./../fonts/Montserrat/Montserrat-Bold.ttf");
-}
-@font-face {
-  font-family: montserrat_medium;
-  src: url("./../fonts/Montserrat/Montserrat-Medium.ttf");
+    font-family: montserrat_bold;
+    src: url("./../fonts/Montserrat/Montserrat-Bold.ttf");
 }
 
 @font-face {
-  font-family: bungee;
-  src: url("./../fonts/Bungee/Bungee-Regular.ttf");
+    font-family: montserrat_medium;
+    src: url("./../fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
 @font-face {
-  font-family: road_rage;
-  src: url("./../fonts/Road_Rage/RoadRage-Regular.ttf");
+    font-family: bungee;
+    src: url("./../fonts/Bungee/Bungee-Regular.ttf");
+}
+
+@font-face {
+    font-family: road_rage;
+    src: url("./../fonts/Road_Rage/RoadRage-Regular.ttf");
 }
 
 body {
-/*   background-color: #595856;
- */
+    /*   background-color: #595856;
+     */
     background-image: url("./../images/pattern.png");
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 
-  
+
 }
+
 li {
-  float: left; /*pour IE*/
+    float: left; /*pour IE*/
 }
+
 div ul li a {
-/*   display: block;
-  float: left; */
-  min-width: 240px;
-  line-height: 50px; /*hauteur de l'image de fond*/
-  background: rgb(46, 46, 46);
-  color: #dcdcdc;
-  font-family: montserrat_bold;
-  text-decoration: none;
-  text-align: center;
-  transition: 0.3s;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 20px;
+    /*   display: block;
+      float: left; */
+    min-width: 240px;
+    line-height: 50px; /*hauteur de l'image de fond*/
+    background: rgb(46, 46, 46);
+    color: #dcdcdc;
+    font-family: montserrat_bold;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 20px;
 
 }
+
 ul li a:hover {
-  background: rgb(82, 63, 63);
-  font-size: 12px;  
+    background: rgb(82, 63, 63);
+    font-size: 12px;
 }
 
 
 h1 {
-  font-family: road_rage;
-  font-size: 5em;
-  color: #c9c7c1;
-  /* margin-top: -0.6em; */
-  /*   margin-bottom: -0.6em;
- */
-  /* line-height: 0.5em; */
+    font-family: road_rage;
+    font-size: 5em;
+    color: #c9c7c1;
+    /* margin-top: -0.6em; */
+    /*   margin-bottom: -0.6em;
+   */
+    /* line-height: 0.5em; */
 }
 
 /* .titre_elem {
@@ -73,38 +77,40 @@ h1 {
 } */
 
 .logo {
-  width: 110px;
-  height: auto;
-  display: block;
-  float: left;
-  /*   margin-top: -3em;
- */
+    width: 110px;
+    height: auto;
+    display: block;
+    float: left;
+    /*   margin-top: -3em;
+   */
 }
 
 table tr td {
-  border: solid 2px whitesmoke;
-  color: aliceblue;
+    border: solid 2px whitesmoke;
+    color: aliceblue;
 }
+
 table tr th {
-  border: solid 2px whitesmoke;
-  color: aliceblue;
+    border: solid 2px whitesmoke;
+    color: aliceblue;
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 header {
-  display:list-item
+    display: list-item
 }
 
 h2 {
-  color: aliceblue;
+    color: aliceblue;
 }
 
 label {
-  color: aliceblue;
+    color: aliceblue;
 }
+
 /* .global .gauche {
   float:left;
   width:20%;
@@ -114,126 +120,127 @@ label {
 } */
 
 .propos {
-  width: 100%;
-  margin: auto;
+    width: 100%;
+    margin: auto;
 }
 
 .container {
-  margin: auto;
-  width: 1200px;
-  border: solid 2px lightcyan;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 20px;
+    margin: auto;
+    width: 1200px;
+    border: solid 2px lightcyan;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
 
 }
 
 h3 {
-  color: aliceblue;
+    color: aliceblue;
 }
 
 .global {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: rgb(84, 97, 109);
-  border-radius: 20px;
-  width: 50%;
-  padding: 40px;
-  margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(84, 97, 109);
+    border-radius: 20px;
+    width: 50%;
+    padding: 40px;
+    margin: auto;
 }
 
 .cont-formulaire {
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  align-items: center;
-  padding: 40px;
-  width: 50%;
-  background-color: rgb(84, 97, 109);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 40px;
+    width: 50%;
+    background-color: rgb(84, 97, 109);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 form div {
-/*   border: solid 1px black;
- */  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 80px;
+    /*   border: solid 1px black;
+     */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 80px;
 }
 
 form div label {
-  flex: 30%;
+    flex: 30%;
 }
 
 form div input, form div select, form div textarea {
-  width: 200px;
-  margin-left: 20px;
-  flex: 70%;
+    width: 200px;
+    margin-left: 20px;
+    flex: 70%;
 }
 
 .valid {
-  background-color: chartreuse;
-  border-radius: 10px;
+    background-color: chartreuse;
+    border-radius: 10px;
 }
 
-.valid:hover{
-  cursor: pointer;
+.valid:hover {
+    cursor: pointer;
 }
 
 .propos-nom {
-  border-radius: 10px;
-  background-color: cornflowerblue;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 180px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 180px;
 }
 
 .gauche, .droite {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .cont-formulaire-index {
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  align-items: center;
-  padding: 40px;
-  width: 60%;
-  background-color: rgb(84, 97, 109);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 40px;
+    width: 60%;
+    background-color: rgb(84, 97, 109);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .img-contact {
-  border-radius: 20px;
-  width: 100%;
+    border-radius: 20px;
+    width: 100%;
 }
 
 input {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 select {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 textarea {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 #tableau {
-  width: 500px;
+    width: 500px;
 }
 
 .trash {
-  height: 20px;
-  width: auto;
+    height: 20px;
+    width: auto;
 }

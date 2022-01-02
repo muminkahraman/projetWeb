@@ -52,8 +52,8 @@ var tesst = () => {
 const remplirTableau = () => {
     let tableau = JSON.parse(localStorage.getItem('tableau'));
     tableau.map((row) => {
-        addRow(row, row.index);
-    }
+            addRow(row, row.index);
+        }
     )
 }
 
@@ -91,7 +91,7 @@ function addRow(newLine, index) {
     let img = document.createElement('img');
     img.src = './../../assets/images/trash.png';
     img.classList.add('trash');
-    img.setAttribute('onclick','console.log(parentNode.parentNode.rowIndex)');
+    img.setAttribute('onclick', 'console.log(parentNode.parentNode.rowIndex)');
 
     newdelc.appendChild(img);
 
@@ -102,6 +102,7 @@ function addRow(newLine, index) {
     newnotec.appendChild(newnote);
     newcritiquec.appendChild(newcritique);
 }
+
 /* var affich = () => {
     jsonTab.map
 } */

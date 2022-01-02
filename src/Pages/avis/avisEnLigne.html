@@ -8,163 +8,161 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="titre">
-                <img class="titre_elem logo" src="./../../assets/images/logo_png.png" alt="logo du site">
-                <h1 class="titre_elem">Cinécritique</h1>
+<div class="container">
+    <header>
+        <div class="titre">
+            <img class="titre_elem logo" src="./../../assets/images/logo_png.png" alt="logo du site">
+            <h1 class="titre_elem">Cinécritique</h1>
+        </div>
+
+        <ul>
+            <li><a href="./../../index.html">Accueil</a></li>
+            <li><a href="./../avis/avisEnLigne.html">Avis</a></li>
+            <li><a href="./../Profil/Profil.html">Profil</a></li>
+            <li><a href="./../contact/contact.html">Contact</a></li>
+            <li><a href="./../aPropos/aPropos.html">A Propos</a></li>
+
+        </ul>
+    </header>
+    <div class="cont-formulaire">
+        <h2>Avis</h2>
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>nombre d'avis</th>
+                <th>moyenne note</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Titanic</td>
+                <td>525</td>
+                <td>8.23</td>
+            </tr>
+            <tr>
+                <td>Bienvenue chez les Ch'tis</td>
+                <td>745</td>
+                <td>6.24</td>
+            </tr>
+            <tr>
+                <td>Intouchables</td>
+                <td>326</td>
+                <td>8.35</td>
+            </tr>
+            <tr>
+                <td>Blanche neige et les sept nains</td>
+                <td>43</td>
+                <td>7.38</td>
+            </tr>
+            <tr>
+                <td>La grande vadrouille</td>
+                <td>69</td>
+                <td>6.25</td>
+            </tr>
+            <tr>
+                <td>Autant en emporte le vent</td>
+                <td>432</td>
+                <td>3.45</td>
+            </tr>
+            <tr>
+                <td>Il était une fois dans l'ouest</td>
+                <td>58</td>
+                <td>9.22</td>
+            </tr>
+            <tr>
+                <td>Le livre de la jungle</td>
+                <td>3456</td>
+                <td>3.33</td>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td>980</td>
+                <td>5.25</td>
+            </tr>
+            <tr>
+                <td>Les 101 dalmatiens</td>
+                <td>645</td>
+                <td>5.32</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--     <button onclick="tesst()">tesst</button>
+-->
+    </div>
+
+    <div class="cont-formulaire">
+        <h2>Tableau des avis</h2>
+        <table id="tableau">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pseudo</th>
+                <th>Film</th>
+                <th>Titre Avis</th>
+                <th>Note</th>
+                <th>Critique</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- <tr>
+                <td>jean45</td>
+                <td>Titanic</td>
+                <td>Bon film</td>
+                <td>4/5</td>
+                <td>très bon film, j'ai adoré</td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <div class="cont-formulaire">
+        <h2>Formulaire d'ajout de nouvel avis</h2>
+        <form action="#" name="nouvavis" onsubmit="ajout();return false">
+            <div>
+                <label for="nom">Votre Pseudo:</label>
+                <input type="text" id="nom" name="nom" required minlength="4" maxlength="15" size="15">
+            </div>
+            <br>
+            <div>
+                <label for="email">Votre E-mail:</label>
+                <input type="email" id="email" name="email" required minlength="4" maxlength="15" size="15">
+            </div>
+            <br>
+            <div>
+                <label for="name">Nom du film:</label>
+                <input type="text" id="name" name="name" required minlength="4" maxlength="15" size="15">
+            </div>
+            <br>
+            <div>
+                <label for="titre">Titre de votre avis:</label>
+                <input type="text" id="titre" name="titre" required minlength="4" maxlength="15" size="15">
+            </div>
+            <br>
+            <div>
+                <label for="note">note:</label>
+                <select name="note" id="note">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
             </div>
 
-            <ul>
-                <li><a href="./../../index.html">Accueil</a></li>
-                <li><a href="./../avis/avisEnLigne.html">Avis</a></li>
-                <!--             <li><a href="./../nouvelAvis/nouvelAvis.html">Ajouter Avis</a></li>
- -->
-                <li><a href="./../Profil/Profil.html">Profil</a></li>
-                <li><a href="./../contact/contact.html">Contact</a></li>
-                <li><a href="./../aPropos/aPropos.html">A Propos</a></li>
-
-            </ul>
-        </header>
-        <div class="cont-formulaire">
-            <h2>Avis</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>nombre d'avis</th>
-                        <th>moyenne note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Titanic</td>
-                        <td>525</td>
-                        <td>8.23</td>
-                    </tr>
-                    <tr>
-                        <td>Bienvenue chez les Ch'tis</td>
-                        <td>745</td>
-                        <td>6.24</td>
-                    </tr>
-                    <tr>
-                        <td>Intouchables</td>
-                        <td>326</td>
-                        <td>8.35</td>
-                    </tr>
-                    <tr>
-                        <td>Blanche neige et les sept nains</td>
-                        <td>43</td>
-                        <td>7.38</td>
-                    </tr>
-                    <tr>
-                        <td>La grande vadrouille</td>
-                        <td>69</td>
-                        <td>6.25</td>
-                    </tr>
-                    <tr>
-                        <td>Autant en emporte le vent</td>
-                        <td>432</td>
-                        <td>3.45</td>
-                    </tr>
-                    <tr>
-                        <td>Il était une fois dans l'ouest</td>
-                        <td>58</td>
-                        <td>9.22</td>
-                    </tr>
-                    <tr>
-                        <td>Le livre de la jungle</td>
-                        <td>3456</td>
-                        <td>3.33</td>
-                    </tr>
-                    <tr>
-                        <td>Avatar</td>
-                        <td>980</td>
-                        <td>5.25</td>
-                    </tr>
-                    <tr>
-                        <td>Les 101 dalmatiens</td>
-                        <td>645</td>
-                        <td>5.32</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!--     <button onclick="tesst()">tesst</button>
--->
-        </div>
-
-        <div class="cont-formulaire">
-            <h2>Tableau des avis</h2>
-            <table id="tableau">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Pseudo</th>
-                        <th>Film</th>
-                        <th>Titre Avis</th>
-                        <th>Note</th>
-                        <th>Critique</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr>
-                        <td>jean45</td>
-                        <td>Titanic</td>
-                        <td>Bon film</td>
-                        <td>4/5</td>
-                        <td>très bon film, j'ai adoré</td>
-                    </tr> -->
-                </tbody>
-            </table>
-        </div>
-        <div class="cont-formulaire">
-            <h2>Formulaire d'ajout de nouvel avis</h2>
-            <form action="#" name="nouvavis" onsubmit="ajout();return false">
-                <div>
-                    <label for="nom">Votre Pseudo:</label>
-                    <input type="text" id="nom" name="nom" required minlength="4" maxlength="15" size="15">
-                </div>
-                <br>
-                <div>
-                    <label for="email">Votre E-mail:</label>
-                    <input type="email" id="email" name="email" required minlength="4" maxlength="15" size="15">
-                </div>
-                <br>
-                <div>
-                    <label for="name">Nom du film:</label>
-                    <input type="text" id="name" name="name" required minlength="4" maxlength="15" size="15">
-                </div>
-                <br>
-                <div>
-                    <label for="titre">Titre de votre avis:</label>
-                    <input type="text" id="titre" name="titre" required minlength="4" maxlength="15" size="15">
-                </div>
-                <br>
-                <div>
-                    <label for="note">note:</label>
-                    <select name="note" id="note">
-                        <option value=1>1</option>
-                        <option value=2>2</option>
-                        <option value=3>3</option>
-                        <option value=4>4</option>
-                        <option value=5>5</option>
-                    </select>
-                </div>
-
-                <br>
-                <div>
-                    <label for="critique">Votre critique</label>
-                    <textarea id="critique" name="critique" rows="4" cols="30"></textarea>
-                </div>
-                <br>
-                <div>
-                    <input class="valid" type="submit" value="Valider">
-                </div>
-            </form>
-        </div>
-        <script type="text/javascript" src="../../assets/JS/script.js"></script>
+            <br>
+            <div>
+                <label for="critique">Votre critique</label>
+                <textarea id="critique" name="critique" rows="4" cols="30"></textarea>
+            </div>
+            <br>
+            <div>
+                <input class="valid" type="submit" value="Valider">
+            </div>
+        </form>
     </div>
+    <script type="text/javascript" src="../../assets/JS/script.js"></script>
+</div>
 </body>
 
 </html>
